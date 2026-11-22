@@ -4,6 +4,9 @@
 - Leetcode
 - GeeksForGeeks
 - Codechef
+- A2Z Sheet
+- SQL 30+ hour video lecture
+- 
 
 ```
 contact me
