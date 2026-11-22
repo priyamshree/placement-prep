@@ -8,6 +8,12 @@
 - SQL 30+ hour video lecture
 - Java by apna college
 - sql by wscube tech for basic - intermediate. good for beginners
+- Operating Systems
+- Database Management Systems
+- Machine Learning
+- Deep Learning
+- Artificial Intelligence
+- Natural Language Processing
 
 ```
 contact me
