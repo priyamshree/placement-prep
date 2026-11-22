@@ -6,7 +6,8 @@
 - Codechef
 - A2Z Sheet
 - SQL 30+ hour video lecture
-- 
+- Java by apna college
+- sql by wscube tech for basic - intermediate. good for beginners
 
 ```
 contact me
