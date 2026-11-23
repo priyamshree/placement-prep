@@ -24,33 +24,28 @@ this is a placement prep testing, site where we can come and get resources. this
 
 
 
+
 class Solution {
     public char posInfinite(String s, int pos) {
         long len = s.length();
         long p = pos;
-        int step = 0;
 
-        // Find the first construction whose length reaches pos
         while (len < p) {
-            step++;
-            len = 2 * len + step;
+            len = 2 * len + 1;
         }
 
-        // Trace the position backwards
-        for (int i = step; i >= 1; i--) {
-            long prevLen = (len - i) / 2;
+        while (p > s.length()) {
+            long oldLen = (len - 1) / 2;
 
-            // Position belongs to the newly appended '$' characters
-            if (p > prevLen && p <= prevLen + i) {
+            if (p == oldLen + 1) {
                 return '$';
             }
 
-            // Position belongs to the reversed previous string
-            if (p > prevLen + i) {
+            if (p > oldLen + 1) {
                 p = len - p + 1;
             }
 
-            len = prevLen;
+            len = oldLen;
         }
 
         return s.charAt((int) p - 1);
