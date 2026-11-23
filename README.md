@@ -23,31 +23,4 @@ hello
 this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
 
 
-
-
-class Solution {
-    public char posInfinite(String s, int pos) {
-        long len = s.length();
-        long p = pos;
-
-        while (len < p) {
-            len = 2 * len + 1;
-        }
-
-        while (p > s.length()) {
-            long oldLen = (len - 1) / 2;
-
-            if (p == oldLen + 1) {
-                return '$';
-            }
-
-            if (p > oldLen + 1) {
-                p = len - p + 1;
-            }
-
-            len = oldLen;
-        }
-
-        return s.charAt((int) p - 1);
-    }
-}
+i will bring a financial domain project and I will make a complex model so that it belongs to the mncs as well as the fintech companies. so it is better to perform that how am i going to make those changes in my curriculum.
