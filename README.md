@@ -22,7 +22,7 @@ email: priyam1953shree@gmail.com
 hello
 this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
 
-```
+
 
 class Solution {
     public char posInfinite(String s, int pos) {
@@ -56,5 +56,3 @@ class Solution {
         return s.charAt((int) p - 1);
     }
 }
-
-```
