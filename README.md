@@ -24,24 +24,21 @@ this is a placement prep testing, site where we can come and get resources. this
 
 
 i will bring a financial domain project and I will make a complex model so that it belongs to the mncs as well as the fintech companies. so it is better to perform that how am i going to make those changes in my curriculum.
+Given an array arr[] of positive integers, find four indices a, b, c, and d such that arr[a] + arr[b] = arr[c] + arr[d], where a, b, c, d are all distinct indices.
 
-Possibly your code does not work correctly for multiple test-cases (TCs).
+If multiple such quadruplets exist, return the one that is lexicographically smallest when the indices are considered in the order a, b, c, d.
+If no such quadruplet exists, return {-1, -1, -1, -1}. 
+Ensure a < b and c < d, and the pair (a, b) is lexicographically smaller than the pair (c, d).
+Examples:
 
-The first test case where your code failed:
+Input: arr[] = [3, 4, 7, 1, 2, 9, 8]
+Output: [0, 2, 3, 5]
+Explanation: arr[0] + arr[2] = 3 + 7 = 10, arr[3] + arr[5] = 1 + 9 = 10. 
+This is the lexicographically smallest such quadruplet of indices.
+Input: arr[] = [1, 2, 3, 3]
+Output: [-1, -1, -1, -1]
+Explanation: No two distinct pairs of indices produce the same sum.
+Constraints:
 
-Test Cases Passed: 
-0 /1117
-For Input :
-Move to Custom
-arr[] =
-[3, 9, 1, 9, 6, 3, 5, 8]
-Your Code's output is: 
-0 3 1 5
-It's Correct output is: 
-0 1 3 5
-Output Difference: 
-0 1 3 1 5
-Geek Tip:
-Solving the sample test case does not guarantee correctness of solution as your code is checked against multiple test cases.
-Avoid using static/global variables in your code.
-Do not print anything unless mentioned in the problem statement. Avoid unnecessary new line characters.
+4 ≤ arr.size() ≤ 103
+1 ≤ arr[i] ≤ 107
