@@ -44,26 +44,3 @@ class Solution {
         // Remaining incomplete cycle
         long nextK = k + 1;
         long left = k * c + a + 1;
-
-        if (left <= x) {
-            long count = x - left + 1;
-            ans += (left + x) * count / 2;
-            ans += 2L * b * nextK * count;
-        }
-
-        return ans;
-    }
-
-    public int minTime(int a, int b, int d, int l, int r) {
-        long count = (long) r - l + 1;
-
-        long upper = d - l;
-        long lower = d - r - 1;
-
-        long sum = count
-                 + prefixSum(upper, a, b)
-                 - prefixSum(lower, a, b);
-
-        return (int) ((sum % MOD + MOD) % MOD);
-    }
-}
