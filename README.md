@@ -22,23 +22,48 @@ email: priyam1953shree@gmail.com
 hello
 this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
 
+class Solution {
+    static final long MOD = 1_000_000_007L;
 
-i will bring a financial domain project and I will make a complex model so that it belongs to the mncs as well as the fintech companies. so it is better to perform that how am i going to make those changes in my curriculum.
-Given an array arr[] of positive integers, find four indices a, b, c, and d such that arr[a] + arr[b] = arr[c] + arr[d], where a, b, c, d are all distinct indices.
+    private long prefixSum(long x, int a, int b) {
+        if (x <= 0) return 0;
 
-If multiple such quadruplets exist, return the one that is lexicographically smallest when the indices are considered in the order a, b, c, d.
-If no such quadruplet exists, return {-1, -1, -1, -1}. 
-Ensure a < b and c < d, and the pair (a, b) is lexicographically smaller than the pair (c, d).
-Examples:
+        long c = a - b;
+        long base = Math.min(x, a);
 
-Input: arr[] = [3, 4, 7, 1, 2, 9, 8]
-Output: [0, 2, 3, 5]
-Explanation: arr[0] + arr[2] = 3 + 7 = 10, arr[3] + arr[5] = 1 + 9 = 10. 
-This is the lexicographically smallest such quadruplet of indices.
-Input: arr[] = [1, 2, 3, 3]
-Output: [-1, -1, -1, -1]
-Explanation: No two distinct pairs of indices produce the same sum.
-Constraints:
+        long ans = base * (base + 1) / 2;
 
-4 ≤ arr.size() ≤ 103
-1 ≤ arr[i] ≤ 107
+        if (x <= a) return ans;
+
+        long k = (x - a) / c;
+
+        // Sum of all complete movement cycles
+        ans += c * (c * k * k + (2L * a + 1) * k) / 2;
+        ans += (long) b * c * k * (k + 1);
+
+        // Remaining incomplete cycle
+        long nextK = k + 1;
+        long left = k * c + a + 1;
+
+        if (left <= x) {
+            long count = x - left + 1;
+            ans += (left + x) * count / 2;
+            ans += 2L * b * nextK * count;
+        }
+
+        return ans;
+    }
+
+    public int minTime(int a, int b, int d, int l, int r) {
+        long count = (long) r - l + 1;
+
+        long upper = d - l;
+        long lower = d - r - 1;
+
+        long sum = count
+                 + prefixSum(upper, a, b)
+                 - prefixSum(lower, a, b);
+
+        return (int) ((sum % MOD + MOD) % MOD);
+    }
+}
