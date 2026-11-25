@@ -21,26 +21,3 @@ email: priyam1953shree@gmail.com
 ```
 hello
 this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
-
-class Solution {
-    static final long MOD = 1_000_000_007L;
-
-    private long prefixSum(long x, int a, int b) {
-        if (x <= 0) return 0;
-
-        long c = a - b;
-        long base = Math.min(x, a);
-
-        long ans = base * (base + 1) / 2;
-
-        if (x <= a) return ans;
-
-        long k = (x - a) / c;
-
-        // Sum of all complete movement cycles
-        ans += c * (c * k * k + (2L * a + 1) * k) / 2;
-        ans += (long) b * c * k * (k + 1);
-
-        // Remaining incomplete cycle
-        long nextK = k + 1;
-        long left = k * c + a + 1;
