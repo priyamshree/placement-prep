@@ -21,3 +21,10 @@ email: priyam1953shree@gmail.com
 ```
 hello
 this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
+hello 
+class Solution {
+    public ArrayList<Integer> countVowels(String s, int[][] queries) {
+        // code here
+        
+    }
+}
