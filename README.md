@@ -40,15 +40,4 @@ class Solution {
             for (int multiple = factor; multiple <= top; multiple += factor)  // every factor-th cell is a multiple
                 gains[factor] += have[multiple];
 
-        int cheapest = Arrays.stream(prices).min().getAsInt();
-        int[] best = new int[budget + 1];  // no first copies yet: everything goes to the cheapest item
-        Arrays.setAll(best, money -> money / cheapest);
-        for (int[] item : items) {
-            int factor = item[0], price = item[1], gain = gains[factor];
-            if (gain > price / cheapest)  // else the same money buys as many copies of the cheapest item
-                for (int money = budget; money >= price; money--)  // backwards: one first copy per item
-                    best[money] = Math.max(best[money], best[money - price] + gain);
-        }
-        return best[budget];
-    }
-}
+     
