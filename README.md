@@ -19,14 +19,3 @@
 contact me
 email: priyam1953shree@gmail.com
 ```
-hello
-this is a placement prep testing, site where we can come and get resources. this is a data science and ai era.
-class Solution {
-    public boolean canAliceWin(int n) {
-        return (0x61F03F807FC00L >> n & 1) == 1;
-    }
-}
-
-priyamshree/helloworld
-
-
