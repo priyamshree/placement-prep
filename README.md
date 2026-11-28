@@ -18,4 +18,5 @@
 ```
 contact me
 email: priyam1953shree@gmail.com
+linkedin: linkedin.com/in/priyamshree
 ```
