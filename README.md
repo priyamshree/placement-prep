@@ -20,3 +20,7 @@ contact me
 email: priyam1953shree@gmail.com
 linkedin: linkedin.com/in/priyamshree
 ```
+Projects:
+- Maternal Health Risk Prediction
+- Financial Fraud Detection
+- NLP Summarization
