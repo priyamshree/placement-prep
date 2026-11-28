@@ -24,4 +24,7 @@ Projects:
 - Maternal Health Risk Prediction
 - Financial Fraud Detection
 - NLP Summarization
--- wrap
+- wrap
+
+Hurray! 
+https://img.shields.io/badge/coverage-95%25-orange
