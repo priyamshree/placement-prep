@@ -29,15 +29,4 @@ class Solution {
 
 priyamshree/helloworld
 
-class Solution {
-    public int maximumSaleItems(int[][] items, int budget) {
-        int[] factors = Arrays.stream(items).mapToInt(item -> item[0]).toArray();
-        int[] prices = Arrays.stream(items).mapToInt(item -> item[1]).toArray();
-        int top = Arrays.stream(factors).max().getAsInt();
-        int[] have = new int[top + 1], gains = new int[top + 1];  // have[f]: items with factor f
-        for (int factor : factors) have[factor]++;
-        for (int factor = 1; factor <= top; factor++)
-            for (int multiple = factor; multiple <= top; multiple += factor)  // every factor-th cell is a multiple
-                gains[factor] += have[multiple];
 
-     
