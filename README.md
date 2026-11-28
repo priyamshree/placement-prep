@@ -26,5 +26,5 @@ Projects:
 - NLP Summarization
 - wrap
 
-Hurray! 
-(https://img.shields.io/badge/coverage-95%25-orange)
+
+![](https://img.shields.io/badge/coverage-95%25-orange)
